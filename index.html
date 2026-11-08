@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hb Market | Discover Everything</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #e5b83e;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e5b83e;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 420px;
+    background:
+    linear-gradient(90deg,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.25)),
+    url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #e5b83e;
+}
+
+.hero p {
+    line-height: 1.7;
+    color: #eee;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #e5b83e;
+    color: #111;
+    padding: 14px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SEARCH */
+
+.search-section {
+    padding: 25px 6%;
+    background: #f8f8f8;
+}
+
+.search-box {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.search-box button {
+    background: #e5b83e;
+    border: none;
+    padding: 0 22px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* CATEGORIES */
+
+.section {
+    padding: 50px 6%;
+}
+
+.heading {
+    margin-bottom: 25px;
+    font-size: 27px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.category {
+    position: relative;
+    height: 220px;
+    border-radius: 9px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    background: #ddd;
+}
+
+.category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+.category:hover img {
+    transform: scale(1.08);
+}
+
+.category::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,.8)
+    );
+}
+
+.category h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 18px;
+    z-index: 2;
+    font-size: 21px;
+}
+
+/* FEATURED */
+
+.featured {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.featured p {
+    color: #666;
+    margin: 15px 0 25px;
+}
+
+/* SELLER */
+
+.seller {
+    background: #111;
+    color: white;
+    padding: 75px 20px;
+    text-align: center;
+}
+
+.seller h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.seller p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #080808;
+    color: white;
+    padding: 35px 15px;
+    text-align: center;
+}
+
+footer span {
+    color: #e5b83e;
+}
+
+footer p {
+    margin-top: 12px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 40px 7%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .category {
+        height: 160px;
+    }
+
+    .category h3 {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HB MARKET.</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="seller/premium.html">Sell With Us</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Everything You Need. <span>One Marketplace.</span></h1>
+
+        <p>
+            Discover fashion, accessories, artwork,
+            food, electronics and products from
+            different sellers.
+        </p>
+
+        <a href="shop.html" class="btn">
+            Explore Marketplace
+        </a>
+    </div>
+</section>
+
+<section class="search-section">
+    <div class="search-box">
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="What are you looking for?"
+        >
+
+        <button onclick="searchProducts()">
+            Search
+        </button>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="heading">Shop By Category</h2>
+
+    <div class="categories">
+
+        <a href="clothing.html" class="category">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700" alt="Clothing">
+            <h3>Clothing</h3>
+        </a>
+
+        <a href="accessories.html" class="category">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=700" alt="Accessories">
+            <h3>Accessories</h3>
+        </a>
+
+        <a href="artwork.html" class="category">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=700" alt="Artwork">
+            <h3>Artwork</h3>
+        </a>
+
+        <a href="food.html" class="category">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700" alt="Food">
+            <h3>Food</h3>
+        </a>
+
+        <a href="electronics.html" class="category">
+            <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=700" alt="Electronics">
+            <h3>Electronics</h3>
+        </a>
+
+        <a href="other-products.html" class="category">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=700" alt="Home products">
+            <h3>Other Products</h3>
+        </a>
+
+    </div>
+</section>
+
+<section class="featured">
+    <h2 class="heading">Featured Products</h2>
+
+    <p>
+        Find products from independent sellers
+        across different categories.
+    </p>
+
+    <a href="shop.html" class="btn">
+        View All Products
+    </a>
+</section>
+
+<section class="seller">
+    <h2>Want To Sell Something?</h2>
+
+    <p>
+        Turn your products into opportunities.<br>
+        Join Hb Market and reach more customers.
+    </p>
+
+    <a href="seller/premium.html" class="btn">
+        Become A Seller
+    </a>
+</section>
+
+<footer>
+    <h2><span>HB MARKET</span></h2>
+
+    <p>A marketplace powered by Hb Tech.</p>
+
+    <p>© 2026 Hb Market. All Rights Reserved.</p>
+</footer>
+
+<script>
+function searchProducts() {
+    const value = document
+        .getElementById("searchInput")
+        .value.trim();
+
+    if (!value) {
+        alert("Enter a product to search.");
+        return;
+    }
+
+    window.location.href =
+        "shop.html?search=" + encodeURIComponent(value);
+}
+
+document.getElementById("searchInput")
+.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        searchProducts();
+    }
+});
+</script>
+<script type="module" src="firebase.js"></script>
+</body>
+</html>
